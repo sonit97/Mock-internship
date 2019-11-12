@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Models.EF.PRODUCT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+@section scriptsdatatable{
+    <script src="~/Areas/admin/assets/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/admin/assets/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="~/Areas/admin/assets/datatables-responsive/dataTables.responsive.js"></script>
+    }
+
+<h2>Index</h2>
+@section dataTables{
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true,
+                "lengthMenu": [[1, 2, 5, -1], [1, 2, 5, "All"]]
+            });
+        });
+</script>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BRAND.BrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRODUCTSTYPE.ProductTypeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripstion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Images)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProviderID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+  <tbody>
+      @foreach (var item in Model)
+      {
+          <tr>
+              <td>
+                  @Html.ActionLink(@item.ProductID, "Create","Product_details", new { ProductID = @item.ProductID },null)
+                  @*<a href="@Url.Action("Create", "Product_details", new { id = @item.ProductID })">@item.ProductID</a>*@
+            </td>
+              <td>
+                 @Html.DisplayFor(modelItem => item.BRAND.BrandName)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.PRODUCTSTYPE.ProductTypeName)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.ProductName)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.Descripstion)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.Images)
+              </td>
+              <td>
+                  @Html.DisplayFor(modelItem => item.ProviderID)
+              </td>
+              <td>
+                  @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                  @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                  @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+              </td>
+          </tr>
+      }
+  </tbody>
+
+   
+
+</table>

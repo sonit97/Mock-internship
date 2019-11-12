@@ -1,0 +1,67 @@
+﻿@model Models.EF.PRODUCT
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUCT</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BRAND.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BRAND.BrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTSTYPE.ProductTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTSTYPE.ProductTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripstion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripstion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Images)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Images)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProviderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProviderID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

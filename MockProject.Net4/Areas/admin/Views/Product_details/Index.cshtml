@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Models.EF.Product_details>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCT.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIZE.SizeType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quanlity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCT.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIZE.SizeType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quanlity)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+        </td>
+    </tr>
+}
+
+</table>

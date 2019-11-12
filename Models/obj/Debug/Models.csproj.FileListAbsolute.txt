@@ -1,0 +1,10 @@
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\Models.dll.config
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\Models.dll
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\Models.pdb
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\EntityFramework.dll
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\EntityFramework.xml
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\obj\Debug\Models.dll
+C:\Users\User\documents\visual studio 2015\Projects\MockProject.Net4\Models\obj\Debug\Models.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\MockProject.Net4\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
